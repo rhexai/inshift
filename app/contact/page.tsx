@@ -5,8 +5,18 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+interface ContactFormData {
+  name: string;
+  email: string;
+  budget: string;
+  referral: string;
+  website: string;
+  services: string[];
+  message: string;
+}
+
 export default function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: "",
     email: "",
     budget: "N/A",
@@ -24,7 +34,7 @@ export default function Contact() {
     "Social Media"
   ];
 
-  const handleCheckboxChange = (service) => {
+  const handleCheckboxChange = (service: string) => {
     setFormData(prev => ({
       ...prev,
       services: prev.services.includes(service)
@@ -33,7 +43,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
     alert("Thank you for reaching out! We'll be in touch soon.");
