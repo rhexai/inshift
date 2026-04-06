@@ -21,7 +21,7 @@ export default function Header() {
           {/* Top Nav Country Dropdown */ }
           <div className="relative hidden md:block">
             <button 
-              className="flex items-center cursor-pointer hover:text-blue-600 transition-colors focus:outline-none"
+              className="flex items-center cursor-pointer hover:text-[#7c3aed] transition-colors focus:outline-none"
               onClick={() => setIsCountryOpen(!isCountryOpen)}
             >
               {selectedCountry}
@@ -54,8 +54,8 @@ export default function Header() {
             className="flex flex-col space-y-1.5 focus:outline-none group z-50 p-2"
             onClick={() => setIsSidebarOpen(true)}
           >
-            <span className="w-6 h-0.5 bg-black block group-hover:bg-blue-600 transition-colors"></span>
-            <span className="w-6 h-0.5 bg-black block group-hover:bg-blue-600 transition-colors"></span>
+            <span className="w-6 h-0.5 bg-black block group-hover:bg-[#7c3aed] transition-colors"></span>
+            <span className="w-6 h-0.5 bg-black block group-hover:bg-[#7c3aed] transition-colors"></span>
           </button>
         </div>
       </header>
@@ -99,8 +99,8 @@ export default function Header() {
             
             {/* Sidebar Navigation */}
             <nav className="flex flex-col space-y-6 md:space-y-8 flex-grow">
-              {['Home', 'Work', 'Services', 'People', 'News', 'Careers'].map((item) => {
-                const subPath = item.toLowerCase() === 'home' ? '' : item.toLowerCase();
+              {['Home', 'Work', 'Services', 'Our Journey', 'News', 'Careers'].map((item) => {
+                const subPath = item.toLowerCase() === 'home' ? '' : item.toLowerCase().replace(/\s+/g, '-');
                 const routeUrl = `/${subPath}`;
                 return (
                   <a key={item} href={routeUrl} className="text-2xl md:text-3xl font-medium tracking-tight text-white hover:text-gray-400 transition-colors">
@@ -115,14 +115,17 @@ export default function Header() {
             </nav>
             
             {/* Sidebar Footer */}
-            <div className="mt-12 pt-8 border-t border-white/20 text-xs text-gray-400 font-medium leading-relaxed">
-              <p className="mb-6 max-w-[250px]">For all new business inquiries, please contact us at parry.rominger@inshift.com or through the &quot;Get in touch&quot; form.</p>
-              <p className="max-w-[250px]">
-                120 Wall St, Floor 11<br />
-                New York, NY 10005<br />
-                1 917 237 8888<br />
-                newbiz@inshift.com
+            <div className="mt-12 pt-8 border-t border-white/20 text-xs text-gray-400 font-medium leading-relaxed pb-8">
+              <p className="mb-6 max-w-[250px]">For all new business inquiries, please contact us at inshift.media@scriptlabs.digital or scan the QR Code to get in touch.</p>
+              <p className="max-w-[250px] mb-6">
+                Near Flatland Central Mosque,<br />
+                Shai Osudoku, G0-132-8766,<br />
+                Accra, Ghana<br />
+                inshift.media@scriptlabs.digital
               </p>
+              <div className="bg-white p-2 rounded-lg w-fit shadow-lg mt-4 hover:scale-105 transition-transform duration-300">
+                <Image src="/wa-qr.png" alt="Scan to connect on WhatsApp" width={100} height={100} className="rounded" />
+              </div>
             </div>
           </div>
         </div>

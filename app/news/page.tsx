@@ -1,45 +1,9 @@
 import Header from "@/components/Header";
 import Image from "next/image";
+import Link from "next/link";
+import { articles } from "./data";
 
 export default function News() {
-  const articles = [
-    {
-      id: 1,
-      image: "/feature_1.png",
-      date: "OCT 17, 2024",
-      title: "Inshift Partners with Global Lead to Launch Full Scale Operations",
-    },
-    {
-      id: 2,
-      image: "/feature_2.png",
-      date: "OCT 16, 2024",
-      title: "Inshift Releases Version 2.0 of Landmark Brand Reputation Solution",
-    },
-    {
-      id: 3,
-      image: "/feature_3.png",
-      date: "OCT 10, 2024",
-      title: "Inshift Announces Two New Original Series in Partnership with Leading Creators",
-    },
-    {
-      id: 4,
-      image: "/feature_1.png",
-      date: "OCT 2, 2024",
-      title: "Vice Studios Group and Inshift Announce Development of Unscripted Catalog",
-    },
-    {
-      id: 5,
-      image: "/feature_2.png",
-      date: "SEP 27, 2024",
-      title: "Inshift Named One of Canada's Top Growing Companies",
-    },
-    {
-      id: 6,
-      image: "/feature_3.png",
-      date: "SEP 26, 2024",
-      title: "Inshift Debuts Free Digital Creator Guide Series on How to Succeed",
-    }
-  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-white text-black selection:bg-[#7c3aed] selection:text-white pb-32">
@@ -55,7 +19,7 @@ export default function News() {
         {/* Title & Subtitle */}
         <div className="max-w-7xl mx-auto">
           <h1 className="text-white text-5xl md:text-6xl lg:text-[5rem] font-bold tracking-tight mb-4">
-            Inshift News & Press
+            Inshift News & Blog
           </h1>
           <p className="text-gray-300 text-lg md:text-xl font-medium mb-16">
             Catch up on the latest news and industry updates.
@@ -93,7 +57,7 @@ export default function News() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {articles.map((article) => (
-              <div key={article.id} className="flex flex-col border-[3px] border-black h-full group hover:-translate-y-1 transition-transform duration-300 ease-out cursor-pointer">
+              <Link href={`/news/${article.slug}`} key={article.id} className="flex flex-col border-[3px] border-black h-full group hover:-translate-y-1 transition-transform duration-300 ease-out cursor-pointer no-underline text-black">
                 
                 {/* Card Image Area */}
                 <div className="relative w-full aspect-square md:aspect-[4/3] border-b-[3px] border-black bg-gray-100 overflow-hidden">
@@ -121,7 +85,7 @@ export default function News() {
                   </div>
                 </div>
 
-              </div>
+              </Link>
             ))}
           </div>
 
