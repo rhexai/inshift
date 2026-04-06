@@ -1,24 +1,11 @@
 import Image from "next/image";
+import Header from "@/components/Header";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-black selection:bg-blue-600 selection:text-white">
       {/* Navigation Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-white/90 text-black backdrop-blur-sm border-b border-gray-100">
-        <div className="flex items-center">
-          <Image src="/logo.png" alt="Inshift Media Logo" width={140} height={45} className="object-contain" priority />
-        </div>
-        <div className="flex items-center space-x-6 text-sm font-semibold">
-          <span className="hidden md:flex items-center cursor-pointer">
-            United States
-            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
-          </span>
-          <button className="flex flex-col space-y-1.5 focus:outline-none group">
-            <span className="w-6 h-0.5 bg-black block group-hover:bg-blue-600 transition-colors"></span>
-            <span className="w-6 h-0.5 bg-black block group-hover:bg-blue-600 transition-colors"></span>
-          </button>
-        </div>
-      </header>
+      <Header />
 
       <main className="flex-grow pt-32">
         {/* Typography Hero Section */}
@@ -32,7 +19,7 @@ export default function Home() {
         {/* Video / Reel Section */}
         <section className="relative w-full h-[60vh] md:h-[80vh] bg-black group cursor-pointer flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 z-0">
-             <Image
+            <Image
               src="/hero_reel.png"
               alt="Inshift Showreel"
               fill
@@ -41,7 +28,7 @@ export default function Home() {
             />
           </div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full w-full bg-black/20 group-hover:bg-transparent transition-colors duration-500">
-             <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">Play with Audio</h2>
+            <h2 className="text-4xl md:text-6xl font-bold text-white tracking-wide opacity-80 group-hover:opacity-100 transition-opacity">Play with Audio</h2>
           </div>
         </section>
 
@@ -61,7 +48,7 @@ export default function Home() {
             <span className="text-gray-500 uppercase tracking-widest text-xs font-semibold mb-4">Our DNA</span>
             <div className="w-12 h-1 bg-blue-700"></div>
           </div>
-          
+
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-y-16 gap-x-12">
             {[
               { title: "Creatively Led", text: "Ambition for the best creative leads all of us. We care about the quality and integrity of our work above all else." },
@@ -103,7 +90,7 @@ export default function Home() {
             </div>
           </div>
 
-           {/* Feature 3 */}
+          {/* Feature 3 */}
           <div className="relative w-full h-[70vh] md:h-[80vh] group">
             <Image src="/feature_3.png" alt="Neon Pulse Energy" fill className="object-cover object-center" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent group-hover:from-black/90 transition-all"></div>
@@ -120,7 +107,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-white text-black px-6 py-12 md:px-12 flex flex-col md:flex-row justify-between items-center border-t border-gray-200 mt-auto">
         <div className="mb-6 md:mb-0">
-          <Image src="/logo.png" alt="Inshift Media Logo" width={160} height={50} className="object-contain" />
+          <Image src="/logo.png" alt="Inshift Media Logo" width={800} height={500} className="w-auto h-12 sm:h-16 md:h-28 object-contain mix-blend-multiply" quality={100} />
         </div>
         <div className="flex space-x-6 text-sm font-medium text-gray-500">
           <a href="#" className="hover:text-black transition-colors">Privacy Policy</a>
