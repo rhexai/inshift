@@ -27,15 +27,21 @@ export default function Careers() {
             </p>
          </div>
 
-         {/* Alternate Contact Prompt */}
-         <div className="pt-12 md:pt-16 max-w-lg mx-auto flex flex-col items-center">
-            <h2 className="text-2xl md:text-3xl font-medium tracking-tight mb-4 text-gray-800">
-              Don't see something for you?
-            </h2>
-            <p className="text-sm md:text-base text-gray-400 font-medium">
-              Things change quickly around here, so please check back with us soon.
-            </p>
-         </div>
+          {/* Apply Now Section */}
+          <div className="pt-12 md:pt-16 max-w-lg mx-auto flex flex-col items-center">
+             <h2 className="text-3xl md:text-4xl font-black tracking-tight mb-6 text-gray-900 uppercase">
+               Ready to Apply?
+             </h2>
+             <p className="text-base md:text-lg text-gray-600 font-medium mb-10 leading-relaxed">
+               Think you&apos;d be a great fit? Send your CV and a brief introduction to our team.
+             </p>
+             <a 
+               href="mailto:inshift.media@scriptlabs.digital" 
+               className="bg-[#7c3aed] text-white px-10 py-5 font-black text-sm md:text-base tracking-[0.15em] hover:bg-[#6d28d9] transition-all hover:scale-105 shadow-xl hover:shadow-violet-200"
+             >
+               INSHIFT.MEDIA@SCRIPTLABS.DIGITAL
+             </a>
+          </div>
       </main>
     </div>
   );
