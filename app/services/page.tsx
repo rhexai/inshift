@@ -47,17 +47,17 @@ export default function Services() {
       <Header />
 
       {/* 1. Split Hero Section */}
-      <section className="flex flex-col lg:flex-row w-full pt-32 md:pt-48 lg:pt-56 border-b border-gray-100 min-h-[85vh]">
+      <section className="flex flex-col lg:flex-row w-full pt-20 md:pt-48 lg:pt-56 border-b border-gray-100 min-h-[85vh]">
 
         {/* Left Side (Content) */}
-        <div className="w-full lg:w-[55%] bg-[#f8f9fa] pt-16 md:pt-24 lg:pt-32 pb-24 px-6 md:px-16 lg:px-24 flex flex-col justify-center">
-          <h1 className="text-4xl md:text-5xl lg:text-[4rem] font-bold leading-tight tracking-tight text-gray-900 mb-12">
+        <div className="w-full lg:w-[55%] bg-[#f8f9fa] pt-12 md:pt-24 lg:pt-32 pb-16 md:pb-24 px-5 md:px-16 lg:px-24 flex flex-col justify-center">
+          <h1 className="text-3xl md:text-5xl lg:text-[4rem] font-bold leading-tight tracking-tight text-gray-900 mb-8 md:mb-12">
             Content is king, but we've got the whole royal court.
           </h1>
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 font-medium">
+          <p className="text-gray-700 text-base md:text-xl leading-relaxed mb-6 font-medium">
             Sharp copy and world-class design are only the start. We use SEO strategy, natural language processing and more when we create your content. AI is used to intelligently speed up the process, not replace what's needed to make it best-in-class.
           </p>
-          <p className="text-gray-700 text-lg md:text-xl leading-relaxed font-medium">
+          <p className="text-gray-700 text-base md:text-xl leading-relaxed font-medium">
             The result? Your pieces are primed to reach the largest audience possible. After all, our crowning achievement isn't just content — it's content that gets seen.
           </p>
         </div>
@@ -90,9 +90,9 @@ export default function Services() {
       </section>
 
       {/* 2. Services Grid */}
-      <section className="px-6 md:px-12 lg:px-24 py-24 md:py-32 bg-[#f8f9fa] border-b border-gray-100">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8">
-          <h2 className="text-3xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-2xl leading-tight text-gray-900 text-left">
+      <section className="px-5 md:px-12 lg:px-24 py-16 md:py-32 bg-[#f8f9fa] border-b border-gray-100">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-20 gap-8">
+          <h2 className="text-2xl md:text-5xl lg:text-5xl font-extrabold tracking-tight max-w-2xl leading-tight text-gray-900 text-left">
             Specialized services to scale your brand.
           </h2>
         </div>
@@ -120,18 +120,18 @@ export default function Services() {
       </section>
 
       {/* 3. Brands Matrix */}
-      <section className="px-6 md:px-12 lg:px-24 pb-32 pt-16 bg-white text-center">
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-12">
+      <section className="px-5 md:px-12 lg:px-24 pb-20 md:pb-32 pt-12 md:pt-16 bg-white text-center">
+        <h2 className="text-2xl md:text-5xl font-extrabold tracking-tight mb-8 md:mb-12">
           We've helped great brands reach new heights.
         </h2>
 
         {/* Toggle Pills */}
-        <div className="flex items-center justify-center space-x-2 md:space-x-4 mb-20 border border-gray-300 rounded-full w-fit mx-auto overflow-hidden">
+        <div className="flex items-center justify-center space-x-1 md:space-x-4 mb-10 md:mb-20 border border-gray-300 rounded-full w-fit mx-auto overflow-hidden">
           {Object.keys(brandLogos).map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-6 py-2.5 font-bold text-sm md:text-base focus:outline-none transition-colors
+              className={`px-4 md:px-6 py-2 md:py-2.5 font-bold text-[11px] sm:text-xs md:text-base focus:outline-none transition-colors
                 ${activeTab === tab ? "border-2 border-black rounded-full text-black bg-gray-50 shadow-sm" : "text-gray-500 hover:text-black hover:bg-gray-50 border-2 border-transparent"}
               `}
             >
@@ -151,13 +151,13 @@ export default function Services() {
       </section>
 
       {/* 4. Fresh Out of the Oven Blog Cards */}
-      <section className="px-6 md:px-12 lg:px-24 py-24 bg-white text-center border-t border-gray-100">
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-16">
+      <section className="px-5 md:px-12 lg:px-24 py-16 md:py-24 bg-white text-center border-t border-gray-100">
+        <h2 className="text-2xl md:text-5xl font-extrabold tracking-tight mb-10 md:mb-16">
           Fresh out of the oven.
         </h2>
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 text-left">
           {blogs.map((blog, idx) => (
-            <div key={idx} className="relative w-full aspect-square md:aspect-[4/5] bg-gray-900 overflow-hidden cursor-pointer group">
+            <div key={idx} className="relative w-full aspect-[4/3] md:aspect-[4/5] bg-gray-900 overflow-hidden cursor-pointer group rounded-lg md:rounded-none">
               <Image
                 src={blog.image}
                 alt={blog.title}
@@ -186,19 +186,19 @@ export default function Services() {
       </section>
 
       {/* 5. Minimalist CTA Black Footer */}
-      <a href="https://wa.link/b4z4gt" target="_blank" rel="noopener noreferrer" className="w-full bg-black py-40 px-6 flex flex-col items-center justify-center text-center group cursor-pointer block no-underline">
-        <h2 className="text-white text-5xl md:text-6xl lg:text-[5rem] font-bold tracking-tight mb-8 max-w-4xl leading-tight group-hover:text-[#7c3aed] transition-colors duration-300">
+      <a href="https://wa.link/b4z4gt" target="_blank" rel="noopener noreferrer" className="w-full bg-black py-20 md:py-40 px-5 flex flex-col items-center justify-center text-center group cursor-pointer block no-underline">
+        <h2 className="text-white text-4xl md:text-6xl lg:text-[5rem] font-bold tracking-tight mb-6 md:mb-8 max-w-4xl leading-tight group-hover:text-[#7c3aed] transition-colors duration-300">
           Let's create something amazing together
         </h2>
-        <div className="flex flex-col md:flex-row items-center gap-6 mt-8">
-          <svg className="w-12 h-12 text-white group-hover:text-[#7c3aed] group-hover:translate-x-4 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="flex flex-col md:flex-row items-center gap-6 mt-6 md:mt-8">
+          <svg className="w-10 h-10 md:w-12 md:h-12 text-white group-hover:text-[#7c3aed] group-hover:translate-x-4 transition-all duration-300 hidden md:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
           <div className="bg-white p-3 rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 flex flex-col items-center">
-            <Image src="/wa-qr.png" alt="Scan to connect on WhatsApp" width={300} height={300} className="rounded" />
-            <span className="text-black font-bold text-xs mt-2 uppercase tracking-wide">Scan to Chat</span>
+            <Image src="/wa-qr.png" alt="Scan to connect on WhatsApp" width={300} height={300} className="rounded w-[150px] h-[150px] md:w-[300px] md:h-[300px]" />
+            <span className="text-black font-bold text-[10px] md:text-xs mt-2 uppercase tracking-wide">Scan to Chat</span>
           </div>
-          <svg className="w-12 h-12 text-white group-hover:text-[#7c3aed] group-hover:translate-x-4 transition-all duration-300 md:hidden mt-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-10 h-10 md:w-12 md:h-12 text-white group-hover:text-[#7c3aed] group-hover:translate-x-4 transition-all duration-300 md:hidden mt-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M14 5l7 7m0 0l-7 7m7-7H3" />
           </svg>
         </div>

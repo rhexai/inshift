@@ -54,18 +54,18 @@ export default function Contact() {
       <Header />
       
       {/* 1. Hero Section */}
-      <section className="pt-56 md:pt-64 lg:pt-72 px-6 pb-24 md:pb-32 text-center max-w-5xl mx-auto">
-        <h1 className="text-5xl md:text-7xl lg:text-[6.5rem] font-bold tracking-tight text-gray-500 leading-[0.95]">
+      <section className="pt-32 md:pt-64 lg:pt-72 px-5 pb-16 md:pb-32 text-center max-w-5xl mx-auto">
+        <h1 className="text-4xl md:text-7xl lg:text-[6.5rem] font-bold tracking-tight text-gray-500 leading-[1.05] md:leading-[0.95]">
           Let&apos;s create something amazing together. But first, let&apos;s get introduced.
         </h1>
       </section>
 
       {/* 2. "Are we right for each other?" Section */}
-      <section className="px-6 md:px-12 lg:px-24 py-24 border-t border-gray-100 flex flex-col lg:flex-row items-center justify-between gap-16 lg:gap-24 w-full max-w-[1400px] mx-auto overflow-hidden">
+      <section className="px-5 md:px-12 lg:px-24 py-16 md:py-24 border-t border-gray-100 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-24 w-full max-w-[1400px] mx-auto overflow-hidden">
         
         {/* Left Column (Text Content) */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-8">
             Are we right for each other?
           </h2>
           {/* Violet Accent Line */}
@@ -152,9 +152,9 @@ export default function Contact() {
       </section>
 
       {/* 3. Form Section */}
-      <section className="px-6 md:px-12 lg:px-24 py-24 bg-white w-full max-w-[1400px] mx-auto border-t border-gray-100">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight">
+      <section className="px-5 md:px-12 lg:px-24 py-16 md:py-24 bg-white w-full max-w-[1400px] mx-auto border-t border-gray-100">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6 md:gap-8">
+          <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
             Get in touch:
           </h2>
           <a href="https://wa.link/b4z4gt" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 bg-gray-50 border border-gray-100 p-3 rounded-xl hover:shadow-lg transition-all group w-fit no-underline">

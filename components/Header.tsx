@@ -12,9 +12,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-6 py-4 md:px-12 md:py-6 bg-white/90 text-black backdrop-blur-sm border-b border-gray-100">
-        <div className="flex items-center -ml-4 md:-ml-6 lg:-ml-8">
-          <Image src="/logo.png" alt="Inshift Media Logo" width={800} height={500} className="w-auto h-12 sm:h-16 md:h-36 lg:h-44 scale-125 origin-left object-contain mix-blend-multiply" quality={100} priority />
+      <header className="fixed top-0 left-0 right-0 z-40 flex items-center justify-between px-5 py-3 md:px-12 md:py-6 bg-white/95 text-black backdrop-blur-md border-b border-gray-100 shadow-sm">
+        <div className="flex items-center -ml-2 md:-ml-6 lg:-ml-8">
+          <Image src="/logo.png" alt="Inshift Media Logo" width={800} height={500} className="w-auto h-10 sm:h-14 md:h-24 lg:h-32 scale-110 md:scale-125 origin-left object-contain mix-blend-multiply" quality={100} priority />
         </div>
         
         <div className="flex items-center space-x-6 text-sm font-semibold">
@@ -63,15 +63,15 @@ export default function Header() {
       {/* Sidebar Overlay */}
       {isSidebarOpen && (
         <div 
-          className="fixed inset-0 z-50 flex justify-end bg-black/20 backdrop-blur-sm transition-opacity" 
+          className="fixed inset-0 z-50 flex justify-end bg-black/40 backdrop-blur-sm transition-opacity" 
           onClick={() => setIsSidebarOpen(false)}
         >
           <div 
-            className="w-full max-w-[400px] bg-black text-white h-full flex flex-col p-8 md:p-12 shadow-2xl animate-in slide-in-from-right duration-300 overflow-y-auto" 
+            className="w-[85vw] sm:w-full max-w-[400px] bg-[#0a0a0a] text-white h-full flex flex-col p-6 md:p-12 shadow-2xl animate-in slide-in-from-right duration-300 overflow-y-auto border-l border-white/10" 
             onClick={(e) => e.stopPropagation()}
           >
             {/* Sidebar Header */}
-            <div className="flex justify-between items-center mb-16">
+            <div className="flex justify-between items-center mb-10 md:mb-16">
               <div className="relative group/side-country">
                 <button className="flex items-center text-sm font-bold cursor-pointer text-white hover:text-gray-300 focus:outline-none group">
                   {selectedCountry}
@@ -98,7 +98,7 @@ export default function Header() {
             </div>
             
             {/* Sidebar Navigation */}
-            <nav className="flex flex-col space-y-6 md:space-y-8 flex-grow">
+            <nav className="flex flex-col space-y-5 md:space-y-8 flex-grow">
               {['Home', 'Work', 'Services', 'Our Journey', 'News', 'Careers'].map((item) => {
                 const subPath = item.toLowerCase() === 'home' ? '' : item.toLowerCase().replace(/\s+/g, '-');
                 const routeUrl = `/${subPath}`;
@@ -115,8 +115,8 @@ export default function Header() {
             </nav>
             
             {/* Sidebar Footer */}
-            <div className="mt-12 pt-8 border-t border-white/20 text-xs text-gray-400 font-medium leading-relaxed pb-8">
-              <p className="mb-6 max-w-[250px]">For all new business inquiries, please contact us at inshift.media@scriptlabs.digital or scan the QR Code to get in touch.</p>
+            <div className="mt-8 md:mt-12 pt-6 md:pt-8 border-t border-white/20 text-xs text-gray-400 font-medium leading-relaxed pb-8">
+              <p className="mb-4 md:mb-6 max-w-[250px]">For all new business inquiries, please contact us at inshift.media@scriptlabs.digital or scan the QR Code to get in touch.</p>
               <p className="max-w-[250px] mb-6">
                 Near Flatland Central Mosque,<br />
                 Shai Osudoku, G0-132-8766,<br />

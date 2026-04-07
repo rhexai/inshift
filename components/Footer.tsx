@@ -3,20 +3,20 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-white border-t border-gray-100 py-12 px-6 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between text-xs md:text-sm font-medium text-gray-500 gap-6 mt-auto">
-       <div className="flex flex-col md:flex-row items-center gap-6 shrink-0">
-          <Image src="/logo.png" alt="Inshift Media Logo" width={800} height={500} className="w-auto h-8 sm:h-10 md:h-14 object-contain mix-blend-multiply" quality={100} />
-          <span className="font-bold tracking-tight mt-4 md:mt-0 border-t md:border-t-0 md:border-l border-gray-200 md:pl-6 pt-4 md:pt-0">
+    <footer className="w-full bg-white border-t border-gray-100 py-10 md:py-12 px-5 md:px-12 lg:px-24 flex flex-col lg:flex-row items-center justify-between text-[11px] md:text-sm font-medium text-gray-500 gap-6 mt-auto">
+       <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 shrink-0">
+          <Image src="/logo.png" alt="Inshift Media Logo" width={800} height={500} className="w-auto h-6 sm:h-8 md:h-14 object-contain mix-blend-multiply" quality={100} />
+          <span className="font-bold tracking-tight mt-2 md:mt-0 border-t md:border-t-0 md:border-l border-gray-200 md:pl-6 pt-3 md:pt-0">
             &copy;{new Date().getFullYear()} Inshift Media (Gablecorp). All rights reserved.
           </span>
        </div>
 
-       <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-8 gap-y-4 lg:gap-10">
+       <div className="flex flex-wrap items-center justify-center lg:justify-end gap-x-6 gap-y-3 lg:gap-10">
           <Link href="#" className="hover:text-black transition-colors font-bold">Privacy Policy</Link>
           <Link href="#" className="hover:text-black transition-colors font-bold">Terms and Conditions</Link>
           <Link href="/contact" className="hover:text-black transition-colors font-bold">Contact</Link>
           <Link href="#" className="hover:text-black transition-colors font-bold">Sitemap</Link>
-          <div className="flex items-center space-x-4 text-gray-400 ml-0 md:ml-4 border-l border-gray-200 pl-4 md:pl-8">
+          <div className="flex items-center space-x-4 text-gray-400 mt-2 md:mt-0 ml-0 md:ml-4 border-l-0 md:border-l border-gray-200 pl-0 md:pl-8">
             <a href="#" className="hover:text-[#7c3aed] transition-colors">
               <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
             </a>

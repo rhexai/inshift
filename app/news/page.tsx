@@ -14,11 +14,11 @@ export default function News() {
         Must accommodate header height via pt-32 or similar. 
         Using bg-black for the top block.
       */}
-      <section className="bg-black pt-56 md:pt-72 lg:pt-80 pb-16 px-6 md:px-12 w-full lg:px-24">
+      <section className="bg-black pt-32 md:pt-72 lg:pt-80 pb-12 md:pb-16 px-5 md:px-12 w-full lg:px-24">
         
         {/* Title & Subtitle */}
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-white text-5xl md:text-6xl lg:text-[5rem] font-bold tracking-tight mb-4">
+          <h1 className="text-white text-4xl md:text-6xl lg:text-[5rem] font-bold tracking-tight mb-4">
             Inshift News & Blog
           </h1>
           <p className="text-gray-300 text-lg md:text-xl font-medium mb-16">
@@ -26,16 +26,16 @@ export default function News() {
           </p>
 
           {/* Featured White Banner */}
-          <div className="w-full bg-white p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 mb-24">
+          <div className="w-full bg-white p-6 md:p-12 lg:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 mb-16 md:mb-24">
             <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">
                 Influencer Marketing at Scale: A New Model for the Social Era
               </h2>
-              <p className="text-gray-600 text-md md:text-lg">
+              <p className="text-gray-600 text-sm md:text-lg">
                 Learn what it takes to scale influencer marketing like a performance channel and drive measurable impact.
               </p>
             </div>
-            <button className="bg-[#7c3aed] text-white px-8 py-4 font-bold text-sm hover:bg-[#6d28d9] transition-colors whitespace-nowrap">
+            <button className="bg-[#7c3aed] text-white px-6 py-3 md:px-8 md:py-4 font-bold text-xs md:text-sm hover:bg-[#6d28d9] transition-colors whitespace-nowrap">
               Get The Report
             </button>
           </div>
@@ -52,10 +52,10 @@ export default function News() {
       </section>
 
       {/* Main Grid Section */}
-      <section className="px-6 md:px-12 lg:px-24 py-20 w-full">
+      <section className="px-5 md:px-12 lg:px-24 py-16 md:py-20 w-full">
         <div className="max-w-7xl mx-auto">
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">
             {articles.map((article) => (
               <Link href={`/news/${article.slug}`} key={article.id} className="flex flex-col border-[3px] border-black h-full group hover:-translate-y-1 transition-transform duration-300 ease-out cursor-pointer no-underline text-black">
                 

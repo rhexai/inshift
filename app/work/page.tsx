@@ -63,17 +63,17 @@ export default function Work() {
       <Header />
 
       {/* Massive Hero Typography Section */}
-      <section className="pt-56 md:pt-64 lg:pt-72 px-6 pb-24 md:pb-32 flex justify-center text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-[5.5rem] font-black tracking-tighter leading-[0.9] max-w-5xl text-gray-900">
+      <section className="pt-32 md:pt-64 lg:pt-72 px-5 pb-16 md:pb-32 flex justify-center text-center">
+        <h1 className="text-3xl md:text-6xl lg:text-[5.5rem] font-black tracking-tighter leading-[1.05] md:leading-[0.9] max-w-5xl text-gray-900">
           Unrivaled content <br />marketing expertise.
         </h1>
       </section>
 
       <main className="w-full flex justify-center">
-        <div className="max-w-[1600px] w-full px-6 md:px-12 lg:px-24">
+        <div className="max-w-[1600px] w-full px-5 md:px-12 lg:px-24">
 
           {/* Zig-Zag Featured Projects Array */}
-          <div className="flex flex-col space-y-32 md:space-y-48 mb-32">
+          <div className="flex flex-col space-y-20 md:space-y-48 mb-16 md:mb-32">
             {featuredProjects.map((project, index) => {
               // Determine if image should be on the left or right
               const isImageLeft = index % 2 === 0;
@@ -81,7 +81,7 @@ export default function Work() {
               return (
                 <div
                   key={project.id}
-                  className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12 lg:gap-24`}
+                  className={`flex flex-col ${isImageLeft ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8 md:gap-12 lg:gap-24`}
                 >
                   {/* Image Container */}
                   <div className="w-full md:w-3/5 lg:w-[65%] group cursor-pointer relative aspect-video md:aspect-[4/3] overflow-hidden bg-gray-100">
@@ -96,10 +96,10 @@ export default function Work() {
 
                   {/* Typography Container */}
                   <div className="w-full md:w-2/5 lg:w-[35%] flex flex-col justify-center">
-                    <span className="text-gray-400 text-xs md:text-sm font-bold tracking-widest uppercase mb-4">
+                    <span className="text-gray-400 text-xs md:text-sm font-bold tracking-widest uppercase mb-3 md:mb-4">
                       {project.client}
                     </span>
-                    <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-gray-900 leading-tight mb-8 max-w-sm">
+                    <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium tracking-tight text-gray-900 leading-tight mb-6 md:mb-8 max-w-sm">
                       {project.title}
                     </h2>
                     <div className="flex">
@@ -121,7 +121,7 @@ export default function Work() {
           </div>
 
           {/* Secondary 3-Column Grid Array */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-16 mb-16 md:mb-24">
             {gridProjects.map((project) => (
               <div key={project.id} className="flex flex-col group cursor-pointer">
                 <div className="w-full aspect-[4/5] relative bg-gray-100 mb-6 overflow-hidden">
@@ -143,7 +143,7 @@ export default function Work() {
           </div>
 
           {/* Footer Interactive Actions */}
-          <div className="flex flex-col items-center justify-center pt-16 relative">
+          <div className="flex flex-col items-center justify-center pt-10 md:pt-16 relative">
             <a href="https://wa.link/b4z4gt" target="_blank" rel="noopener noreferrer" className="inline-block no-underline">
               <button className="bg-black text-white px-8 py-4 font-bold text-sm tracking-wide hover:bg-gray-800 transition-colors">
                 Get in touch
